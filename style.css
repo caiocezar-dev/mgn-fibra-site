@@ -1,0 +1,437 @@
+/* Reset básico */
+@import url('https:fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== PALETA DE CORES ========== */
+:root {
+    --cor-primaria: #9f3233;  /* Vermelho */
+    --cor-secundaria: #682c2b; /* Bordô */
+    --cor-texto: #000000;      /* Preto */
+    --cor-texto-claro: #ffffff; /* Branco */
+    --cor-destaque: #672b2a;   /* Bordô escuro */
+    --cor-fundo: #f8f8f8; /* Fundo claro */
+}
+
+/* ========== ESTILO GERAL ========== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ========== CABEÇALHO ========== */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 20px;
+    text-align: center;
+}
+
+/* ========== NAVEGAÇÃO ========== */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cor-destaque);
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    background: url('../img/banner.jpg') no-repeat center center/cover;
+    color: var(--cor-texto-claro);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* ========== BOTÕES ========== */
+.btn {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: var(--cor-destaque);
+}
+
+/* ========== SEÇÕES ========== */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--cor-texto);
+}
+
+/* ========== PLANOS ========== */
+#planos{
+    background-color: var(--cor-primaria);
+    padding: 60px 20px;
+}
+.planos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.plano-card {
+    background-color: var(--cor-texto-claro);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    text-align: center;
+    flex: 1 1 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plano-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ========== FORMULÁRIO ========== */
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+}
+
+/* ========== CONTATO ========== */
+.contato-links {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.contato-links a {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contato-links a:hover {
+    text-decoration: underline;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 20px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    .planos-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.planos-cpf {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plano {
+    background: var(--cor-fundo);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 220px;
+    color: #050505;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.plano-top {
+    background: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plano-speed {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.plano-speed span {
+    font-size: 18px;
+    display: block;
+}
+
+.plano-beneficios {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.plano-beneficios p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.plano-mgnplay {
+    background: var(--cor-destaque);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.plano-lista {
+    background: var(--cor-fundo);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.plano-speed {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.plano-speed span {
+    font-size: 18px;
+    display: block;
+}
+
+.chamada h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color:var(--cor-texto-claro);
+}
+
+.chamada p {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--cor-texto-claro) /* Vermelho escuro */
+}
+
+.preco {
+    font-size: 28px;
+    font-weight: 700;
+    color:var(--cor-fundo);
+    padding: 5px 15px;
+    /*border: 3px solid black;*/
+    border-radius: 10px;
+    display: inline-block;
+    animation: destaque 1.5s infinite alternate ease-in-out;
+}
+
+.chamada {
+    margin-bottom: 40px;
+}
+
+.chamada h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--cor-texto-claro);
+    margin-bottom: 10px;
+}
+
+.chamada p {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--cor-fundo); /* Vermelho escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+/* Destaque do preço começa aqui */
+/* Destaque Premium para o preço */
+.preco {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--cor-texto); /* Preto */
+    padding: 5px 18px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #fff, #f4f4f4);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    animation: glow-effect 2s infinite ease-in-out;
+}
+
+/* Efeito de brilho suave */
+.preco::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(139, 0, 0, 0.2); /* Vermelho escuro translúcido */
+    border-radius: 30px;
+    animation: glow-pulse 2s infinite ease-in-out;
+}
+
+/* Animação de brilho */
+@keyframes glow-pulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Animação de efeito suave */
+@keyframes glow-effect {
+    0%, 100% {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0px 6px 20px rgba(139, 0, 0, 0.3);
+    }
+}
+/*Destaque do preço termina aqui*/
+
+/* Efeito suave de crescimento ao passar o mouse */
+.preco:hover {
+    transform: scale(1.1);}
+
+/* Ajuste para o plano de 320MB */
+.plano-super {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: #8B0000; /* Vermelho escuro */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+
+/* Corrigir a cor do texto para branco */
+.plano-320 h3 {
+    color: white !important;
+}
+#planos h3{
+    margin-top: 55px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--cor-fundo); /* Vermelho escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+/* Estilo para o botão "Contrate agora" */
+.contrate {
+    text-align: center;
+    margin: 40px 0; /* Espaçamento acima e abaixo */
+  }
+  
+  .contrate span {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--cor-texto); /* Preto */
+    padding: 5px 18px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #fff, #f4f4f4);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    animation: glow-effect 2s infinite ease-in-out;
+  }
+  
+  /* Efeito de brilho suave */
+  .contrate span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(139, 0, 0, 0.2); /* Vermelho escuro translúcido */
+    border-radius: 30px;
+    animation: glow-pulse 2s infinite ease-in-out;
+  }
+  
+  /* Efeito de crescimento ao passar o mouse */
+  .contrate span:hover {
+    transform: scale(1.1);
+  }
